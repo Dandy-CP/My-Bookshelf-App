@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <title>My Bookshelf Apps</title>
+  </head>
+  <body>
+    <nav>
+      <h1>My Bookshelf 📖</h1>
+    </nav>
+
+    <header>
+      <div class="titletext">
+        <h1 class="animate__animated animate__backInDown">MY BOOKSHELF APP</h1>
+        <p class="animate__animated animate__backInLeft animate__slow">
+          Katalog dan atur perpustakaan atau koleksi buku di beberapa rak buku
+          virtual. Tambahkan judul, penulis dan tahun terbit pada kolom tambah
+          judul untuk memasukan judul pada rak buku. Tandai telah selesai
+          membaca dengan memilih tombol centang. Hapus buku dari rak dengan
+          memilih tombol silang. Dan masukan kembali ke rak belum selesai
+          membaca dengan tombol arow loop.
+        </p>
+        <a href="#titleaddbook">
+          <button class="animate__animated animate__backInLeft animate__slow">
+            Mulai Sekarang
+          </button>
+        </a>
+      </div>
+      <img
+        src="assets/undraw_reading_book_re_kqpk.svg"
+        alt="heroimg"
+        width="500"
+        class="animate__animated animate__fadeIn animate__slow"
+      />
+      <div class="search_section">
+        <h2>Cari Buku Anda Yang Sudah Di Simpan</h2>
+        <form id="filter">
+          <input
+            id="search"
+            type="text"
+            name="search"
+            placeholder="Masukan Judul"
+          />
+        </form>
+        <a href="#hasil"
+          ><p>Scroll kebawah untuk melihat buku yang anda sudah cari</p></a
+        >
+      </div>
+    </header>
+
+    <div class="wrapper" data-aos="fade-down">
+      <div class="titleheading-add-book" id="titleaddbook">
+        <h1>Silahkan Tambah Judul Buku</h1>
+      </div>
+
+      <div class="container-add-book" id="add-book">
+        <img
+          src="assets/undraw_add_files_re_v09g.svg"
+          alt="addinfo"
+          width="200"
+        />
+
+        <form class="form" action="#" id="form">
+          <div class="form-grup">
+            <input
+              type="text"
+              id="title"
+              name="title"
+              placeholder="Judul..."
+              required
+            />
+          </div>
+
+          <div class="form-grup">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Penulis ..."
+              required
+            />
+          </div>
+
+          <div class="form-grup">
+            <input
+              id="inputBookYear"
+              type="number"
+              placeholder="Tahun ..."
+              required
+            />
+          </div>
+
+          <div class="checkbox">
+            <label for="inputBookIsComplete"
+              >Buku Ini Sudah Selesai dibaca ?</label
+            >
+            <input id="inputBookIsComplete" type="checkbox" />
+          </div>
+
+          <button
+            type="submit"
+            id="submit"
+            value="Submit"
+            name="Submit"
+            class="btn-submit"
+            onclick="myFunction()"
+          >
+            Masukan Buku
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container-book" id="hasil">
+      <div class="container-book-false" data-aos="fade-up-right">
+        <h1>Buku Yang Belum Selesai Di Baca</h1>
+        <div class="list-item" id="book"></div>
+      </div>
+
+      <div class="container-book-true" data-aos="fade-up-left">
+        <h1>Buku Yang Sudah Selesai Di Baca</h1>
+        <div class="list-item" id="completed-book"></div>
+      </div>
+    </div>
+
+    <div class="quotes">
+      <img
+        src="assets/undraw_reading_list_re_bk72.svg"
+        alt="quotes"
+        width="400px"
+      />
+    </div>
+
+    <div id="notif">Buku Berhasil Di Tambahkan...</div>
+
+    <footer>
+      <p>
+        Di buat dengan ☕ oleh Dandy Candra, Menggunakan HTML,CSS,JAVASCRIPT.
+      </p>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="search.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
